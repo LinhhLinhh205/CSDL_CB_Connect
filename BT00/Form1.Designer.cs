@@ -63,6 +63,7 @@ namespace BT00
             this.btnSqlWin.TabIndex = 2;
             this.btnSqlWin.Text = "SQL Windows";
             this.btnSqlWin.UseVisualStyleBackColor = true;
+            this.btnSqlWin.Click += new System.EventHandler(this.btnSqlWin_Click);
             // 
             // btnSqlsa
             // 
@@ -72,6 +73,7 @@ namespace BT00
             this.btnSqlsa.TabIndex = 3;
             this.btnSqlsa.Text = "SQL sa";
             this.btnSqlsa.UseVisualStyleBackColor = true;
+            this.btnSqlsa.Click += new System.EventHandler(this.btnSqlsa_Click);
             // 
             // Form1
             // 

@@ -27,6 +27,8 @@ namespace BT00
             if (cnn.State == ConnectionState.Open)
                 MessageBox.Show("Kết nối với QLSV.mdb thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             cnn.Close();
+
+
         }
 
         private void btnAccess2019_Click(object sender, EventArgs e)
@@ -36,6 +38,26 @@ namespace BT00
             cnn.Open();
             if (cnn.State == ConnectionState.Open)
                 MessageBox.Show("Kết nối với QLSV.accdb thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+            cnn.Close();
+        }
+
+        private void btnSqlWin_Click(object sender, EventArgs e)
+        {
+            string strcon = @"server=.;Database=QLSV;integrated security=true";
+            SqlConnection cnn = new SqlConnection(strcon);
+            cnn.Open();
+            if (cnn.State == ConnectionState.Open)
+                MessageBox.Show("Kết nối với SQL Windows thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+            cnn.Close();
+        }
+
+        private void btnSqlsa_Click(object sender, EventArgs e)
+        {
+            string strcon = @"server=.;Database=QLSV; uid=sa ; pwd=c23";
+            SqlConnection cnn = new SqlConnection(strcon);
+            cnn.Open();
+            if (cnn.State == ConnectionState.Open)
+                MessageBox.Show("Kết nối với SQL sa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             cnn.Close();
         }
     }
